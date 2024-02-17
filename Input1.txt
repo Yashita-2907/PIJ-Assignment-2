@@ -1,0 +1,18 @@
+import java.io.*;
+ 
+ class Input {
+ BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+ // input is a string array of numbers
+ 
+ public double[] arr(int size) throws IOException {
+ double[] inputArray = new double[size];
+ String array = br.readLine();
+ String[] input = array.trim().split("\\s+");
+ 
+ for(int i = 0;i < size; i++) {
+ // Since input taken from BufferedReader, parsing to double data type
+ inputArray[i] = Double.parseDouble(input[i]);
+ }
+ return inputArray;
+ }
+ 
